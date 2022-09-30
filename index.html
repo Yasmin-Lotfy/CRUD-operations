@@ -30,8 +30,10 @@
             <textarea type="text" id="productDec" class="form-control mb-2"></textarea>
             <button type="submit" id="submitBtn" class="btn btn-outline-info" onclick="createProduct()">Add Product</button>
         </form>
+        
         <input type="search" onkeyup="searchData()" id="search" placeholder="search" class="form-control mt-2">
-        <table class="table mt-2">
+       <div class="table-responsive-sm">
+        <table class="table mt-2 table-striped ">
             <thead class="text-center">
                 <th>Index <span class="text-danger" id="counter"></span></th>
                 <th>Product Name</th>
@@ -46,6 +48,7 @@
 
             </tbody>
         </table>
+    </div>
     </div>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>

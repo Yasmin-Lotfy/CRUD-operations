@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS Operations</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="w-75 m-auto pt-5">
+        <h1 class="text-center text-muted mb-1">CRUDS Operation for Store Products</h1>
+        <form  onsubmit="return false" action="" class="form-group">
+            <label for="productName">Product Name <small class=" text-danger">*Max 12 characters starts with upperletter</small></label>
+            <input type="text" id="productName" class="form-control mb-2">
+
+            <label for="productPrice">Product Price <small class=" text-danger">*from 1000:10000</small></label>
+            <input type="number" id="productPrice" class="form-control mb-2">
+
+            <label for="productCategory">Product Category <small class="text-danger">*TV or Laptop or Mobile</small></label>
+            <input type="text" id="productCategory" class="form-control mb-2">
+
+            <label for="productCount">Product Count <small class=" text-danger">*Optional</small></label>
+            <input type="number" id="productCount" class="form-control mb-2">
+
+
+
+            <label for="productDec">Product Description <small class=" text-danger">*from 5 to 500 chatacter</small></label>
+            <textarea type="text" id="productDec" class="form-control mb-2"></textarea>
+            <button type="submit" id="submitBtn" class="btn btn-outline-info" onclick="createProduct()">Add Product</button>
+        </form>
+        <input type="search" onkeyup="searchData()" id="search" placeholder="search" class="form-control mt-2">
+        <table class="table mt-2">
+            <thead class="text-center">
+                <th>Index <span class="text-danger" id="counter"></span></th>
+                <th>Product Name</th>
+                <th>Product Price</th>
+                <th>Product Category</th>
+                <th>Product Description</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="table">
+                
+
+            </tbody>
+        </table>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body> 
+</html>

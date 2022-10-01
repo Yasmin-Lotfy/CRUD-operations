@@ -122,7 +122,7 @@ function deleteProduct(i){
 function searchData(){
     var search = document.getElementById("search");
     if(search.value != null){
-        var character = search.value;
+        var character = search.value.toLowerCase();
         var tableData=''; // empty every time for loop as it wont duplicate at every click
         var c =0;
         for(var i=0; i< allProducts.length ; i++ ){

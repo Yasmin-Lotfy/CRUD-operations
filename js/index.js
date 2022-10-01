@@ -122,7 +122,7 @@ function deleteProduct(i){
 function searchData(){
     var search = document.getElementById("search");
     if(search.value != null){
-        var character = search.value.toLowerCase();
+        var character = search.value;
         var tableData=''; // empty every time for loop as it wont duplicate at every click
         var c =0;
         for(var i=0; i< allProducts.length ; i++ ){
@@ -130,7 +130,7 @@ function searchData(){
                 
                     tableData +=`<tr class="text-center align-middle">
                                             <td>${i}</td>
-                                            <td>${allProducts[i].productName.toLowerCase().replace(character, `<span class="text-danger fw-bolder">${character}</span>`)}</td>
+                                            <td>${allProducts[i].productName.replace(character, `<span class="text-danger fw-bolder">${character}</span>`)}</td>
                                             <td>${allProducts[i].productPrice}</td>
                                             <td>${allProducts[i].productCategory}</td>
                                             <td>${allProducts[i].productDec}</td>

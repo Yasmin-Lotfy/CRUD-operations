@@ -21,7 +21,7 @@ showData()
 function createProduct(){
 if(validationForm() == true){
     if(count.value != null){
-        for (var i=0 ; i<count.value ; i++){
+        for (var i=0 ; i<(count.value)-1 ; i++){
             product = {
                 productName:productName.value,
                 productPrice:productPrice.value,
